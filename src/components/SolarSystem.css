@@ -1,0 +1,68 @@
+.solar-system {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin: auto;
+  }
+  
+  .sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: orange;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+  }
+  
+  .planet {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 300px; /* Distance from the center (adjust as needed) */
+    animation: orbit 10s linear infinite;
+  }
+  
+  .planet:nth-child(even) {
+    animation-duration: 12s; /* Different speeds for variety */
+  }
+  
+  .card {
+    width: 80px;
+    height: 100px;
+    background: lightblue;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, -50%);
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 50px;
+    object-fit: cover;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .card-info {
+    padding: 5px;
+  }
+  
+  @keyframes orbit {
+    0% {
+      transform: rotate(0deg) translateX(300px);
+    }
+    100% {
+      transform: rotate(360deg) translateX(300px);
+    }
+  }
+  
